@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { changeName } from '../store/slices/name.slice';
+import pokedexLogo from '../assets/pokedex-logo.png'
 
 
 const InputName = () => {
@@ -18,7 +19,7 @@ const InputName = () => {
 
   return (
     <div className='input-background'>
-      <img src="src\assets\pokedex-logo.png" className='input-logo' />
+      <img src={pokedexLogo} className='input-logo' />
       <div className='input-content'>
         <h1>Hello trainer!</h1>
         <img src="src\assets\entrenador.png" />

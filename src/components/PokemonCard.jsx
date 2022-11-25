@@ -1,7 +1,25 @@
 import axios from 'axios';
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import grass from '../assets/grassenergy.jpg'
+import fire from '../assets/fireenergy.jpg'
+import fairy from '../assets/fairyenergy.jpg'
+import normal from '../assets/normalenergy.jpg'
+import water from '../assets/waterenergy.jpg'
+import bug from '../assets/bugenergy.jpg'
+import ghost from '../assets/ghostenergy.jpg'
+import rock from '../assets/rockenergy.jpg'
+import dark from '../assets/darkenergy.jpg'
+import dragon from '../assets/dragonenergy.jpg'
+import electric from '../assets/electricenergy.jpg'
+import poison from '../assets/poisonenergy.jpg'
+import ice from '../assets/iceenergy.jpg'
+import steel from '../assets/steelenergy.jpg'
+import ground from '../assets/groundenergy.jpg'
+import psychic from '../assets/psychicenergy.jpg'
+import flying from '../assets/flyingenergy.jpg'
+
 
 const PokemonCard = ({ url }) => {
 
@@ -13,6 +31,48 @@ const PokemonCard = ({ url }) => {
   }, [])
 
   console.log(pokemon);
+
+  const backgroundImage = (type) => {
+    if (type === "grass") {
+      return `url(${grass})`;
+    } else if (type === "fire") {
+      return `url(${fire})`;
+    } else if (type === "fairy") {
+      return `url(${fairy})`
+    } else if (type === "normal") {
+      return `url(${normal})`;
+    } else if (type === "water") {
+      return `url(${water})`;
+    } else if (type === "bug") {
+      return `url(${bug})`;
+    } else if (type === "ghost") {
+      return `url(${ghost})`;
+    } else if (type === "rock") {
+      return `url(${rock})`;
+    } else if (type === "dark") {
+      return `url(${dark})`;
+    } else if (type === "dragon") {
+      return `url(${dragon})`;
+    } else if (type === "electric") {
+      return `url(${electric})`;
+    } else if (type === "poison") {
+      return `url(${poison})`;
+    } else if (type === "ice") {
+      return `url(${ice})`;
+    } else if (type === "steel") {
+      return `url(${steel})`;
+    } else if (type === "ground") {
+      return `url(${ground})`;
+    } else if (type === "fighting") {
+      return `url(${ground})`;
+    } else if (type === "psychic") {
+      return `url(${psychic})`;
+    } else if(type === 'flying'){
+      return `url(${flying})`
+    } else {
+      return 'white'
+    }
+  }
 
   const textColor = (type) => {
     if (type === "grass") {
@@ -136,48 +196,6 @@ const PokemonCard = ({ url }) => {
       return '#699fff'
     } else {
       return 'black'
-    }
-  }
-
-  const backgroundImage = (type) => {
-    if (type === "grass") {
-      return "url('src/assets/grassenergy.png')";
-    } else if (type === "fire") {
-      return "url('src/assets/fireenergy.jpg')";
-    } else if (type === "fairy") {
-      return "url('src/assets/faityenergy.jpg')"
-    } else if (type === "normal") {
-      return "url('src/assets/normalenergy.png')";
-    } else if (type === "water") {
-      return "url('src/assets/waterenergy.jpg')";
-    } else if (type === "bug") {
-      return "url('src/assets/bugenergy.png')";
-    } else if (type === "ghost") {
-      return "url('src/assets/ghostenergy.jpg')";
-    } else if (type === "rock") {
-      return "url('src/assets/rockenergy.png')";
-    } else if (type === "dark") {
-      return "url('src/assets/darkenergy.jpg')";
-    } else if (type === "dragon") {
-      return "url('src/assets/dragonenergy.jpg')";
-    } else if (type === "electric") {
-      return "url('src/assets/electricenergy.jpg')";
-    } else if (type === "poison") {
-      return "url('src/assets/poisonenergy.png')";
-    } else if (type === "ice") {
-      return "url('src/assets/iceenergy.jpg')";
-    } else if (type === "steel") {
-      return "url('src/assets/steelenergy.jpg')";
-    } else if (type === "ground") {
-      return "url('src/assets/groundenergy.jpg')";
-    } else if (type === "fighting") {
-      return "url('src/assets/groundenergy.jpg')";
-    } else if (type === "psychic") {
-      return "url('src/assets/psychicenergy.jpg')";
-    } else if(type === 'flying'){
-      return "url('src/assets/flyingenergy.jpg')"
-    } else {
-      return 'white'
     }
   }
 

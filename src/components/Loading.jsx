@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import gif from "../assets/JO4d.gif"
 
 const Loading = () => {
 
@@ -13,7 +14,7 @@ const Loading = () => {
 
   return (
     <div className='loading'>
-      <img src="src\assets\JO4d.gif" alt=""/>
+      <img src={gif} alt=""/>
       {changePage()}
     </div>
   );
